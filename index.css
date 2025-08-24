@@ -87,11 +87,15 @@ main {
   color: var(--fsColor);
 }
 .page-title {
-  font-size: clamp(3rem, 2.6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
+  font-weight: 700;
 }
+
 .page-sub-title {
-  font-size: clamp(1rem, 1.3vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  text-align: center;
+  font-weight: 400;
 }
 
 .view-job-button {
@@ -253,7 +257,7 @@ main {
 .faq-answer {
   height: 0;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 16px;
   transition: all 0.3s;
 }
 .faq-answer.active {
