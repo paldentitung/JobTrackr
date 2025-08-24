@@ -30,10 +30,135 @@
       </nav>
     </header>
     <main>
-      <div class="hero-section">
-        <div class="hero-title">Job Trackr</div>
-        <div class="hero-sub-title">"Your Jobs, Simplified."</div>
-      </div>
+      <section class="hero-section">
+        <div class="page-title">Job Trackr</div>
+        <div class="page-sub-title">"Your Jobs, Simplified."</div>
+        <div class="view-job-button-box">
+          <button class="view-job-button">View Job</button>
+        </div>
+      </section>
+      <section class="job-listing">
+        <h2>Jobs:</h2>
+        <div class="job-card-container">
+          <!-- card -->
+        </div>
+
+        <button id="showmore-button">Show more</button>
+      </section>
+
+      <section class="about">
+        <h2 class="page-title">How Job Trackr Works</h2>
+        <p class="page-sub-title">
+          Track, manage, and organize all your job applications in one place.
+        </p>
+      </section>
+
+      <section class="testimonials">
+        <div class="page-title">Testimonials</div>
+        <h2>What Users Say</h2>
+        <!-- Only once -->
+
+        <div class="testimonials-box">
+          <p class="user-feedback">
+            "This app helped me organize my job applications easily!"
+          </p>
+        </div>
+
+        <div class="testimonials-box">
+          <p class="user-feedback">
+            "I love how simple and intuitive the interface is. It saves me so
+            much time!"
+          </p>
+        </div>
+
+        <div class="testimonials-box">
+          <p class="user-feedback">
+            "The show more/less feature for job descriptions is really handy.
+            Great job!"
+          </p>
+        </div>
+
+        <div class="testimonials-box">
+          <p class="user-feedback">
+            "The design is clean and responsive. I can use it on my phone and
+            laptop easily."
+          </p>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="page-title">Frequently Asked Questions</div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <h2 class="faq-question">How do I add a new job?</h2>
+            <p class="faq-answer">
+              Click the “Add Job” button, fill in the job details, and press
+              “Save.”
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h2 class="faq-question">Can I edit a job after adding it?</h2>
+            <p class="faq-answer">
+              Yes, click the “Edit” icon on the job card, update the details,
+              and save.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h2 class="faq-question">How do I mark a job as completed?</h2>
+            <p class="faq-answer">
+              Click the checkbox on the job card. The job will move to the
+              “Completed” section.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h2 class="faq-question">
+              Is there a way to see more details of a job?
+            </h2>
+            <p class="faq-answer">
+              Yes, click the job description to toggle between short and full
+              text.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h2 class="faq-question">Can I filter jobs by type or location?</h2>
+            <p class="faq-answer">
+              Yes, use the filters at the top of the job list to sort by type,
+              location, or priority.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-col">
+          <h3>Job Trackr</h3>
+          <p>"Your Jobs, Simplified."</p>
+        </div>
+        <div class="footer-col">
+          <a href=""> <img src="" alt="instragram" /> </a
+          ><a href=""> <img src="" alt="facebook" /> </a
+          ><a href=""><img src="" alt="twitter" /></a
+          ><a href=""><img src="" alt="whatapps" /></a>
+        </div>
+        <div class="footer-col">
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Condtions</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Faq</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-message">
+          <input type="text" id="message" />
+          <button type="submit">Sent</button>
+        </div>
+      </footer>
     </main>
 
     <script src="index.js" defer></script>
