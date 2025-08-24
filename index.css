@@ -237,6 +237,9 @@ main {
   width: 100%;
   gap: 10px;
 }
+.faq-question {
+  font-size: 1.2rem;
+}
 .faq-item {
   display: flex;
   flex-direction: column;
@@ -250,6 +253,7 @@ main {
 .faq-answer {
   height: 0;
   opacity: 0;
+  font-size: 1rem;
   transition: all 0.3s;
 }
 .faq-answer.active {
