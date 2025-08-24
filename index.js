@@ -11,10 +11,16 @@ menuBtn.addEventListener("click", () => {
 
 async function getJobDetails() {
   try {
-    let res = await fetch("http://localhost:3000/jobs");
+    let res = await fetch(
+      "https://raw.githubusercontent.com/paldentitung/JobTrackr/refs/heads/main/db.json"
+    );
     let data = await res.json();
-    renderJobDetails(data);
-    showMoreButtonFunction(data);
+
+    // Use the jobs array
+    const jobsArray = data.jobs;
+
+    renderJobDetails(jobsArray);
+    showMoreButtonFunction(jobsArray);
   } catch (error) {
     alert("error is " + error);
   }

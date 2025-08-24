@@ -87,13 +87,14 @@ main {
   color: var(--fsColor);
 }
 .page-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
   text-align: center;
   font-weight: 700;
 }
 
 .page-sub-title {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   text-align: center;
   font-weight: 400;
 }
@@ -161,32 +162,32 @@ main {
   font-weight: bold;
 }
 .read-more-btn {
-  padding: 8px 16px;
+  padding: 10px 18px;
   width: 150px;
-  background: var(--SecondaryColor);
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-.read-more-btn:hover {
-  box-shadow: 1px 3px 8px var(--SecondaryColor);
-  cursor: pointer;
-}
-#showmore-button {
-  padding: 8px 16px;
   background: var(--SecondaryColor);
   color: var(--fsColor);
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.read-more-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#showmore-button {
+  padding: 10px 18px;
+  background: var(--SecondaryColor);
+  color: var(--fsColor);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
   transition: all 0.3s;
 }
 #showmore-button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  box-shadow: 1px 3px 8px var(--SecondaryColor);
 }
 .about {
   width: 100%;
