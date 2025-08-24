@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Junior Frontend Developer",
       "type": "Part Time",
       "description": "Join our dynamic team to build responsive and interactive web interfaces using HTML, CSS, and JavaScript. Collaborate with senior developers and gain hands-on experience in modern frontend frameworks.",
@@ -9,7 +9,7 @@
       "location": "Nepal"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Backend Developer",
       "type": "Full Time",
       "description": "Work on server-side applications and APIs using Node.js, Express, and databases. Optimize performance, ensure security, and collaborate with the frontend team to deliver seamless applications.",
@@ -17,7 +17,7 @@
       "location": "Remote"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "UI/UX Designer",
       "type": "Contract",
       "description": "Design user-friendly interfaces and experiences for web and mobile apps. Create wireframes, mockups, and prototypes, and work closely with developers to implement your designs.",
@@ -25,7 +25,7 @@
       "location": "Nepal"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Full Stack Developer",
       "type": "Full Time",
       "description": "Develop complete web applications using both frontend and backend technologies. Manage databases, APIs, and user interfaces to build efficient and scalable solutions.",
@@ -33,7 +33,7 @@
       "location": "Remote"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "DevOps Engineer",
       "type": "Full Time",
       "description": "Implement CI/CD pipelines, monitor system performance, and manage cloud infrastructure. Work closely with development teams to ensure smooth deployments and scalability.",
@@ -41,7 +41,7 @@
       "location": "Remote"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Data Analyst",
       "type": "Full Time",
       "description": "Analyze large datasets to generate actionable insights. Work with SQL, Excel, and data visualization tools to support business decisions.",
@@ -49,7 +49,7 @@
       "location": "Nepal"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Mobile App Developer",
       "type": "Contract",
       "description": "Build and maintain mobile applications for iOS and Android using React Native or Flutter. Collaborate with designers and backend developers to deliver high-quality apps.",
@@ -57,7 +57,7 @@
       "location": "Remote"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "QA Engineer",
       "type": "Full Time",
       "description": "Test web and mobile applications, create automated test scripts, and ensure software quality. Work closely with developers to identify and fix bugs.",
@@ -65,7 +65,7 @@
       "location": "Nepal"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Cloud Solutions Architect",
       "type": "Full Time",
       "description": "Design and implement scalable cloud architectures on AWS, Azure, or Google Cloud. Ensure reliability, security, and cost-effectiveness of cloud solutions.",
@@ -73,12 +73,28 @@
       "location": "Remote"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Technical Writer",
       "type": "Part Time",
       "description": "Create clear and concise documentation for software applications, APIs, and user guides. Collaborate with developers and product managers to ensure accuracy.",
       "salary": "$35-45k/year",
       "location": "Nepal"
+    },
+    {
+      "id": "29d4",
+      "title": "ui/ux",
+      "type": "remote",
+      "description": "it is intershipe",
+      "salary": "1/year",
+      "location": "nepal"
+    },
+    {
+      "id": "cd52",
+      "title": "ui/ux",
+      "type": "remote",
+      "description": "it is intershipe",
+      "salary": "1/year",
+      "location": "nepal"
     }
   ]
 }

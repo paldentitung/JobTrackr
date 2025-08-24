@@ -299,6 +299,139 @@ footer {
   box-shadow: 1px 3px 8px var(--SecondaryColor);
   cursor: pointer;
 }
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+}
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: var(--BgColor);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+.modal-close-button:hover {
+  background: var(--SecondaryColor);
+  color: var(--fsColor);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.modal-content {
+  color: var(--fsColor);
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background: var(--SecondaryBgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.modal-content-box {
+  width: 100%;
+  height: 100%;
+  background: var(--BgColor);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal.active {
+  display: flex;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.modal-form {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 70%;
+  background: var(--BgColor);
+  border-radius: 10px;
+  position: relative;
+
+  background: var(--BgColor);
+  display: none;
+}
+.modal-form.active {
+  display: block;
+}
+.modal-form::after,
+.modal-form::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 75%,
+    var(--SecondaryColor)
+  );
+  animation: spin 4s linear infinite;
+}
+.modal-form::before {
+  filter: blur(16px);
+}
+.modal-form h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+.modal-form form {
+  display: flex;
+
+  flex-direction: column;
+  padding: 5%;
+  gap: 5px;
+  width: 100%;
+}
+.modal-form input {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.modal-form form button {
+  padding: 10px 18px;
+  width: 150px;
+  background: var(--SecondaryColor);
+  color: var(--fsColor);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.modal-form form button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 @media screen and (max-width: 490px) {
   header {
     flex-direction: column;
@@ -361,5 +494,13 @@ footer {
   .footer-col ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
   }
 }
