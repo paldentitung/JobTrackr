@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="">Job Trackr</a>
+        <div class="menu-button-box">
+          <button class="menu-button">
+            <i class="fas fa-bars" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="">Jobs</a></li>
+          <li class="add-job"><a href="">Add Job</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="job-listing">
+      <h2>Jobs:</h2>
+      <div class="job-card-container">
+        <!-- card -->
+      </div>
+
+      <button id="showmore-button">Show more</button>
+    </section>
+
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-content"></div>
+      <div class="modal-form">
+        <h2>Add Job</h2>
+        <form action="">
+          <label for="job-type">Job Type:</label>
+          <input type="text" id="job-type" name="job-type" required />
+
+          <label for="job-title">Job Title:</label>
+          <input type="text" id="job-title" name="job-title" required />
+
+          <label for="job-description">Description:</label>
+          <input
+            type="text"
+            id="job-description"
+            name="job-description"
+            required
+          />
+
+          <label for="job-salary">Salary:</label>
+          <input type="text" id="job-salary" name="job-salary" required />
+
+          <label for="job-location">location:</label>
+          <input type="text" id="job-location" name="job-location" required />
+
+          <div class="add-job-button-box">
+            <button type="submit">Add Job</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-close-button">&times;</div>
+    </div>
+    <script src="../index.js" defer></script>
+  </body>
+</html>

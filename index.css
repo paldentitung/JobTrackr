@@ -478,6 +478,9 @@ footer {
     grid-template: 1fr;
     gap: 10px;
   }
+  .modal-form {
+    height: auto;
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 998px) {
   .job-card-container {

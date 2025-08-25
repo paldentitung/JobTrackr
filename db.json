@@ -9,30 +9,6 @@
       "location": "Nepal"
     },
     {
-      "id": "2",
-      "title": "Backend Developer",
-      "type": "Full Time",
-      "description": "Work on server-side applications and APIs using Node.js, Express, and databases. Optimize performance, ensure security, and collaborate with the frontend team to deliver seamless applications.",
-      "salary": "$60-70k/year",
-      "location": "Remote"
-    },
-    {
-      "id": "3",
-      "title": "UI/UX Designer",
-      "type": "Contract",
-      "description": "Design user-friendly interfaces and experiences for web and mobile apps. Create wireframes, mockups, and prototypes, and work closely with developers to implement your designs.",
-      "salary": "$40-50k/year",
-      "location": "Nepal"
-    },
-    {
-      "id": "4",
-      "title": "Full Stack Developer",
-      "type": "Full Time",
-      "description": "Develop complete web applications using both frontend and backend technologies. Manage databases, APIs, and user interfaces to build efficient and scalable solutions.",
-      "salary": "$70-90k/year",
-      "location": "Remote"
-    },
-    {
       "id": "5",
       "title": "DevOps Engineer",
       "type": "Full Time",
@@ -95,6 +71,38 @@
       "description": "it is intershipe",
       "salary": "1/year",
       "location": "nepal"
+    },
+    {
+      "id": "18a7",
+      "title": "ui/ux",
+      "type": "remote",
+      "description": "it is intershipe",
+      "salary": "123/year",
+      "location": "nepal"
+    },
+    {
+      "id": "1b9a",
+      "title": "ui/ux",
+      "type": "remote",
+      "description": "it is intershipe",
+      "salary": "15/year",
+      "location": "nepal"
+    },
+    {
+      "id": "1b22",
+      "title": "ui/ux",
+      "type": "remote",
+      "description": "it is intershipe",
+      "salary": "8/year",
+      "location": "nepal"
+    },
+    {
+      "id": "6d58",
+      "title": "UI/UX Designer",
+      "type": "Contract",
+      "description": "Design user-friendly interfaces and experiences for web and mobile apps. Create wireframes, mockups, and prototypes, and work closely with developers to implement your designs.",
+      "salary": "40-50k/year",
+      "location": "Nepal"
     }
   ]
 }
