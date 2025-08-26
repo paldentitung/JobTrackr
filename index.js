@@ -160,7 +160,7 @@ function renderSelectedJob(job) {
             </div>
           </div>
           <div class="job-modify">
-            <h2>Manage Job</h2>
+            <span >Manage Job</span>
             <div class="job-btn-container">
               <button class="edit-job-button btn">Edit Job</button>
               <button class="delete-job-button btn">Delete Job</button>

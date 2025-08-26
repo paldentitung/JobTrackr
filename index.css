@@ -296,9 +296,12 @@ footer {
 }
 .footer-col a {
   text-decoration: none;
+
+  padding: 5px;
   color: black;
   font-size: 1.1rem;
 }
+
 .footer-col ul {
   display: flex;
   flex-direction: column;
@@ -306,6 +309,11 @@ footer {
 }
 .footer-col ul li {
   list-style: none;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.footer-col li:hover {
+  border-bottom: 1px solid black;
 }
 .footer-message input {
   padding: 10px;

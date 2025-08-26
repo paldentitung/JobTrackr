@@ -13,7 +13,7 @@ body {
 .card-container {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   gap: 30px;
   width: 100%;
   max-width: 1400px;
@@ -49,8 +49,13 @@ body {
   flex-direction: column;
   width: 25%;
   padding: 10px;
-  height: auto;
+
+  min-height: 300px;
   box-shadow: 1px 3px 8px rgb(192, 192, 192);
+}
+.job-modify span {
+  font-size: 2rem;
+  font-weight: bold;
 }
 .job-btn-container {
   display: flex;
@@ -90,5 +95,16 @@ body {
   .job-card,
   .job-modify {
     width: 100%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .card-container {
+    width: 100%;
+  }
+  .job-card {
+    width: 60%;
+  }
+  .job-modify {
+    width: 35%;
   }
 }
