@@ -139,30 +139,34 @@ function renderSelectedJob(job) {
   if (!container || !job) return;
 
   const containerHtml = `
-    <div class="card-container">
-      <div class="job-card">
-        <div class="card-row">
-          <div class="job-type">${job.type}</div>
-          <div class="job-title">${job.title}</div>
-          <div class="job-location-box">
-            Location: <span class="job-location">${job.location}</span>
+  <div class="card-container">
+          <div class="job-card">
+            <div class="company-info">
+              <h2>${job.company.name}</h2>
+              ${job.company.description}
+            </div>
+            <div class="card-row">
+              <div class="job-type">${job.type}</div>
+              <div class="job-title">${job.title}</div>
+              <div class="job-location-box">
+                Location: <span class="job-location">${job.location}</span>
+              </div>
+            </div>
+            <div class="card-row">
+              <h3>Job Description</h3>
+              <div class="job-description">${job.description}</div>
+              <h3>Salary</h3>
+              <div class="job-salary">$${job.salary}/year</div>
+            </div>
+          </div>
+          <div class="job-modify">
+            <h2>Manage Job</h2>
+            <div class="job-btn-container">
+              <button class="edit-job-button btn">Edit Job</button>
+              <button class="delete-job-button btn">Delete Job</button>
+            </div>
           </div>
         </div>
-        <div class="card-row">
-          <h3>Job Description</h3>
-          <div class="job-description">${job.description}</div>
-          <h3>Salary</h3>
-          <div class="job-salary">$${job.salary}/year</div>
-        </div>
-      </div>
-      <div class="job-modify">
-        <h2>Manage Job</h2>
-        <div class="job-btn-container">
-          <button class="edit-job-button btn">Edit Job</button>
-          <button class="delete-job-button btn">Delete Job</button>
-        </div>
-      </div>
-    </div>
   `;
 
   container.innerHTML = containerHtml;
@@ -173,6 +177,9 @@ function addModalContent(message, buttons) {
   if (!modalContent) return;
 
   let span = document.createElement("span");
+  let buttondiv = document.createElement("div");
+  buttondiv.style.display = "flex";
+  buttondiv.style.gap = "10px";
   span.innerHTML = message;
   let div = document.createElement("div");
   div.classList.add("modal-content-box");
@@ -180,12 +187,14 @@ function addModalContent(message, buttons) {
 
   buttons.forEach((btn) => {
     let button = document.createElement("button");
+
     button.textContent = btn.text;
     button.onclick = btn.onClick;
-    div.appendChild(button);
+    buttondiv.appendChild(button);
   });
 
   modalContent.appendChild(div);
+  div.appendChild(buttondiv);
 }
 
 function modalClose() {
@@ -207,35 +216,76 @@ window.addEventListener("load", () => {
 if (modalForm) {
   modalForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (modalForm) modalForm.classList.remove("active");
-
-    if (modalContent) {
-      modalContent.innerHTML = ""; // clear previous content
-    }
+    modalContent.innerHTML = ""; // clear old modal content
+    modalForm.classList.remove("active");
 
     let jobObject = {
+      id: editingJobId ? editingJobId : Date.now().toString(),
       title: document.getElementById("job-title").value.trim(),
       type: document.getElementById("job-type").value.trim(),
       description: document.getElementById("job-description").value.trim(),
-      salary: document.getElementById("job-salary").value + "/year",
+      salary:
+        "$" + document.getElementById("job-salary").value.trim() + "/year",
       location: document.getElementById("job-location").value.trim(),
+      company: {
+        name: document.getElementById("Company-name").value.trim(),
+        description: document
+          .getElementById("Company-description")
+          .value.trim(),
+      },
     };
 
-    addModalContent("Do you want to add this job?", [
-      { text: "Go Back", onClick: () => modalClose() },
-      {
-        text: "Add Job",
-        onClick: async () => {
-          await addJobToServer(jobObject);
-          modalClose();
-        },
-      },
-    ]);
+    if (editingJobId) {
+      // EDIT MODE
+      addModalContent("Do you want to update this job?", [
+        { text: "Go Back", onClick: () => modalClose() },
+        {
+          text: "Update Job",
+          onClick: async () => {
+            try {
+              let res = await fetch(
+                `http://localhost:3000/jobs/${editingJobId}`,
+                {
+                  method: "PUT",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(jobObject),
+                }
+              );
+              if (!res.ok) throw new Error("Failed to update job");
 
-    if (modalContent) modalContent.style.display = "block"; // show modal content
+              let updatedJob = await res.json();
+              // update local array
+              jobsArray = jobsArray.map((j) =>
+                j.id === editingJobId ? updatedJob : j
+              );
+
+              localStorage.setItem("selectedJob", JSON.stringify(updatedJob));
+              renderSelectedJob(updatedJob);
+              editingJobId = null; // reset
+              modalClose();
+            } catch (err) {
+              console.error("Update failed:", err);
+            }
+          },
+        },
+      ]);
+    } else {
+      // ADD MODE
+      addModalContent("Do you want to add this job?", [
+        { text: "Go Back", onClick: () => modalClose() },
+        {
+          text: "Add Job",
+          onClick: async () => {
+            await addJobToServer(jobObject);
+            modalClose();
+          },
+        },
+      ]);
+    }
+
+    modalContent.style.display = "block"; // show modal content
   });
 }
-
 if (modalCloseButton) {
   modalCloseButton.addEventListener("click", modalClose);
 }
@@ -254,6 +304,7 @@ if (modal) {
 }
 
 const job = JSON.parse(localStorage.getItem("selectedJob"));
+let editingJobId = null; // track if we are editing or adding
 
 if (job) {
   renderSelectedJob(job);
@@ -264,18 +315,21 @@ if (job) {
 
     if (editJobButton) {
       editJobButton.addEventListener("click", () => {
-        console.log("clicked edit");
         modalOpen();
         modalForm.classList.add("active");
         modalContent.style.display = "none";
+
+        editingJobId = job.id; // ✅ global var now
+
+        document.getElementById("Company-name").value = job.company.name;
+        document.getElementById("Company-description").value =
+          job.company.description;
         document.getElementById("job-title").value = job.title;
         document.getElementById("job-type").value = job.type;
         document.getElementById("job-description").value = job.description;
-        let rawSalary = job.salary; // "$40-50k/year"
-        let cleanSalary = rawSalary.replace(/\$|\/year/g, "");
-        // cleanSalary = "40-50k"
-        document.getElementById("job-salary").value = cleanSalary;
-
+        document.getElementById("job-salary").value = job.salary
+          .replace(/\$|\/year/g, "")
+          .trim();
         document.getElementById("job-location").value = job.location;
       });
     }

@@ -37,11 +37,39 @@
       <div class="modal-form">
         <h2>Add Job</h2>
         <form action="">
+          <label for="Company-name">Company name:</label>
+          <input
+            type="text"
+            id="Company-name"
+            name="Company-name"
+            placeholder="e.g., CodeCrafters Pvt. Ltd."
+          />
+
+          <label for="Company-description">Company Description:</label>
+          <input
+            type="text"
+            id="Company-description"
+            name="Company-description"
+            placeholder="e.g., A software company specializing in web applications."
+          />
+
           <label for="job-type">Job Type:</label>
-          <input type="text" id="job-type" name="job-type" required />
+          <input
+            type="text"
+            id="job-type"
+            name="job-type"
+            required
+            placeholder="e.g., Full Time, Part Time, Remote"
+          />
 
           <label for="job-title">Job Title:</label>
-          <input type="text" id="job-title" name="job-title" required />
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            required
+            placeholder="e.g., Junior Frontend Developer"
+          />
 
           <label for="job-description">Description:</label>
           <input
@@ -49,13 +77,26 @@
             id="job-description"
             name="job-description"
             required
+            placeholder="e.g., Build responsive and interactive web interfaces."
           />
 
           <label for="job-salary">Salary:</label>
-          <input type="text" id="job-salary" name="job-salary" required />
+          <input
+            type="text"
+            id="job-salary"
+            name="job-salary"
+            required
+            placeholder="e.g., 50-60k"
+          />
 
-          <label for="job-location">location:</label>
-          <input type="text" id="job-location" name="job-location" required />
+          <label for="job-location">Location:</label>
+          <input
+            type="text"
+            id="job-location"
+            name="job-location"
+            required
+            placeholder="e.g., Nepal, Remote"
+          />
 
           <div class="add-job-button-box">
             <button type="submit">Add Job</button>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobTrackr Info</title>
+    <link rel="stylesheet" href="../index.css" />
+    <style>
+      /* Basic Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+
+      section {
+        background-color: white;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        margin-bottom: 1rem;
+        color: #1e3a8a;
+      }
+
+      section p {
+        margin-bottom: 1rem;
+      }
+      footer {
+        background: rgb(253, 251, 251);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="">Job Trackr</a>
+        <div class="menu-button-box">
+          <button class="menu-button">
+            <i class="fas fa-bars" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./jobs.html">Jobs</a></li>
+          <li class="add-job"><a href="">Add Job</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="privacy-policy">
+        <h2>Privacy Policy</h2>
+        <p>
+          JobTrackr respects your privacy. We collect only necessary information
+          to improve user experience and never share personal data without your
+          consent.
+        </p>
+      </section>
+
+      <section id="terms-conditions">
+        <h2>Terms & Conditions</h2>
+        <p>
+          By using JobTrackr, you agree to comply with our rules and
+          regulations. Users are responsible for the content they post and any
+          actions taken using the platform.
+        </p>
+      </section>
+
+      <section id="support">
+        <h2>Support</h2>
+        <p>
+          Our support team is here to help you. You can report issues, request
+          features, or get guidance on using JobTrackr effectively.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Have questions or feedback? Reach out to us via email:
+          <a href="mailto:support@jobtrackr.com">support@jobtrackr.com</a> or
+          phone: +1 234 567 890.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-col">
+        <h3>Job Trackr</h3>
+        <p>"Your Jobs, Simplified."</p>
+      </div>
+      <div class="footer-col">
+        <a href=""> <img src="" alt="instragram" /> </a
+        ><a href=""> <img src="" alt="facebook" /> </a
+        ><a href=""><img src="" alt="twitter" /></a
+        ><a href=""><img src="" alt="whatapps" /></a>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="#terms-conditions">Terms & Condtions</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="../index.html#faq">Faq</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-message">
+        <input type="text" id="message" />
+        <button type="submit">Sent</button>
+      </div>
+    </footer>
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-content"></div>
+      <div class="modal-form">
+        <h2>Add Job</h2>
+        <form action="">
+          <label for="Company-name">Company name:</label>
+          <input
+            type="text"
+            id="Company-name"
+            name="Company-name"
+            placeholder="e.g., CodeCrafters Pvt. Ltd."
+          />
+
+          <label for="Company-description">Company Description:</label>
+          <input
+            type="text"
+            id="Company-description"
+            name="Company-description"
+            placeholder="e.g., A software company specializing in web applications."
+          />
+
+          <label for="job-type">Job Type:</label>
+          <input
+            type="text"
+            id="job-type"
+            name="job-type"
+            required
+            placeholder="e.g., Full Time, Part Time, Remote"
+          />
+
+          <label for="job-title">Job Title:</label>
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            required
+            placeholder="e.g., Junior Frontend Developer"
+          />
+
+          <label for="job-description">Description:</label>
+          <input
+            type="text"
+            id="job-description"
+            name="job-description"
+            required
+            placeholder="e.g., Build responsive and interactive web interfaces."
+          />
+
+          <label for="job-salary">Salary:</label>
+          <input
+            type="text"
+            id="job-salary"
+            name="job-salary"
+            required
+            placeholder="e.g., 50-60k"
+          />
+
+          <label for="job-location">Location:</label>
+          <input
+            type="text"
+            id="job-location"
+            name="job-location"
+            required
+            placeholder="e.g., Nepal, Remote"
+          />
+
+          <div class="add-job-button-box">
+            <button type="submit">Add Job</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-close-button">&times;</div>
+    </div>
+    <script src="../index.js"></script>
+  </body>
+</html>

@@ -31,10 +31,20 @@
     </header>
     <main>
       <section class="hero-section">
-        <div class="page-title">Job Trackr</div>
-        <div class="page-sub-title">"Your Jobs, Simplified."</div>
-        <div class="view-job-button-box">
-          <button class="view-job-button">View Job</button>
+        <div class="hero-img">
+          <img
+            src="images/cheerful-businessmen-close-window-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div class="hero-info">
+          <div class="page-title">Job Trackr</div>
+          <div class="page-sub-title">"Your Jobs, Simplified."</div>
+          <div class="view-job-button-box">
+            <a href="pages/jobs.html">
+              <button class="view-job-button">View Job</button></a
+            >
+          </div>
         </div>
       </section>
       <section class="job-listing">
@@ -86,7 +96,7 @@
         </div>
       </section>
 
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="page-title">Frequently Asked Questions</div>
 
         <div class="faq-container">
@@ -149,11 +159,19 @@
         </div>
         <div class="footer-col">
           <ul>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms & Condtions</a></li>
-            <li><a href="">Support</a></li>
-            <li><a href="">Faq</a></li>
-            <li><a href="">Contact</a></li>
+            <li>
+              <a href="pages/jobtrackr-info.html#privacy-policy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="pages/jobtrackr-info.html#terms-condtitons"
+                >Terms & Condtions</a
+              >
+            </li>
+            <li><a href="pages/jobtrackr-info.html#support">Support</a></li>
+            <li><a href="#faq">Faq</a></li>
+            <li><a href="pages/jobtrackr-info.html#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col footer-message">
@@ -168,11 +186,39 @@
       <div class="modal-form">
         <h2>Add Job</h2>
         <form action="">
+          <label for="Company-name">Company name:</label>
+          <input
+            type="text"
+            id="Company-name"
+            name="Company-name"
+            placeholder="e.g., CodeCrafters Pvt. Ltd."
+          />
+
+          <label for="Company-description">Company Description:</label>
+          <input
+            type="text"
+            id="Company-description"
+            name="Company-description"
+            placeholder="e.g., A software company specializing in web applications."
+          />
+
           <label for="job-type">Job Type:</label>
-          <input type="text" id="job-type" name="job-type" required />
+          <input
+            type="text"
+            id="job-type"
+            name="job-type"
+            required
+            placeholder="e.g., Full Time, Part Time, Remote"
+          />
 
           <label for="job-title">Job Title:</label>
-          <input type="text" id="job-title" name="job-title" required />
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            required
+            placeholder="e.g., Junior Frontend Developer"
+          />
 
           <label for="job-description">Description:</label>
           <input
@@ -180,13 +226,26 @@
             id="job-description"
             name="job-description"
             required
+            placeholder="e.g., Build responsive and interactive web interfaces."
           />
 
           <label for="job-salary">Salary:</label>
-          <input type="text" id="job-salary" name="job-salary" required />
+          <input
+            type="text"
+            id="job-salary"
+            name="job-salary"
+            required
+            placeholder="e.g., 50-60k"
+          />
 
-          <label for="job-location">location:</label>
-          <input type="text" id="job-location" name="job-location" required />
+          <label for="job-location">Location:</label>
+          <input
+            type="text"
+            id="job-location"
+            name="job-location"
+            required
+            placeholder="e.g., Nepal, Remote"
+          />
 
           <div class="add-job-button-box">
             <button type="submit">Add Job</button>
