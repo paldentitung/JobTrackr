@@ -7,7 +7,7 @@ const modalCloseButton = document.querySelector(".modal-close-button");
 const addJobBtn = document.querySelector(".add-job");
 
 let jobsArray = [];
-
+//fixed
 // --------------------------- Functions ---------------------------
 
 // Fetch jobs from Render API
@@ -338,15 +338,12 @@ if (job) {
       deleteJobButton.addEventListener("click", () => {
         console.log("clicked delete");
 
-        // Open modal
         modalOpen();
         modalContent.style.display = "block";
         modalForm.style.display = "none";
 
-        // Clear previous content
         modalContent.innerHTML = "";
 
-        // Add delete confirmation
         addModalContent("Are you sure you want to delete this job?", [
           {
             text: "Delete Job",
@@ -367,7 +364,6 @@ if (job) {
                   // Remove from localStorage
                   localStorage.removeItem("selectedJob");
 
-                  // Option 1: redirect to index page
                   window.location.href = "../index.html";
                 } catch (err) {
                   console.error("Failed to delete job:", err);
