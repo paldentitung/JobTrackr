@@ -9,28 +9,12 @@
       "location": "Nepal"
     },
     {
-      "id": "5",
-      "title": "DevOps Engineer",
-      "type": "Full Time",
-      "description": "Implement CI/CD pipelines, monitor system performance, and manage cloud infrastructure. Work closely with development teams to ensure smooth deployments and scalability.",
-      "salary": "$80-100k/year",
-      "location": "Remote"
-    },
-    {
       "id": "6",
       "title": "Data Analyst",
       "type": "Full Time",
       "description": "Analyze large datasets to generate actionable insights. Work with SQL, Excel, and data visualization tools to support business decisions.",
       "salary": "$55-65k/year",
       "location": "Nepal"
-    },
-    {
-      "id": "7",
-      "title": "Mobile App Developer",
-      "type": "Contract",
-      "description": "Build and maintain mobile applications for iOS and Android using React Native or Flutter. Collaborate with designers and backend developers to deliver high-quality apps.",
-      "salary": "$60-75k/year",
-      "location": "Remote"
     },
     {
       "id": "8",
@@ -86,14 +70,6 @@
       "type": "remote",
       "description": "it is intershipe",
       "salary": "15/year",
-      "location": "nepal"
-    },
-    {
-      "id": "1b22",
-      "title": "ui/ux",
-      "type": "remote",
-      "description": "it is intershipe",
-      "salary": "8/year",
       "location": "nepal"
     },
     {

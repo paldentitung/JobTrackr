@@ -10,17 +10,16 @@ let jobsArray = [];
 
 // --------------------------- Functions ---------------------------
 
-// Fetch jobs from server
+// Fetch jobs from Render API
 async function getJobDetails() {
   try {
     let res = await fetch("http://localhost:3000/jobs");
     if (!res.ok) throw new Error("Network response was not ok");
 
     let data = await res.json();
-    jobsArray = data;
+    jobsArray = data; // Already an array from the API
     console.log(jobsArray);
 
-    // Render only if container exists
     const jobContainer = document.querySelector(".job-card-container");
     if (jobContainer) renderJobDetails(jobsArray);
 
@@ -31,14 +30,14 @@ async function getJobDetails() {
     const jobContainer = document.querySelector(".job-card-container");
     if (jobContainer) {
       let span = document.createElement("span");
-      span.textContent = `There is no server open for details`;
+      span.textContent = `Failed to load jobs.`;
       span.style.textAlign = "center";
       jobContainer.appendChild(span);
     }
   }
 }
 
-// Add job to server
+// Add a new job to Render API
 async function addJobToServer(jobObject) {
   try {
     let res = await fetch("http://localhost:3000/jobs", {
@@ -47,11 +46,15 @@ async function addJobToServer(jobObject) {
       body: JSON.stringify(jobObject),
     });
 
+    if (!res.ok) throw new Error("Failed to add job");
+
     let data = await res.json();
-    jobsArray.push(data);
+    jobsArray.push(data); // Add the new job to the local array
 
     const jobContainer = document.querySelector(".job-card-container");
     if (jobContainer) renderJobDetails(jobsArray);
+
+    console.log("Job added successfully:", data);
   } catch (error) {
     console.error("Failed to add job:", error);
   }
@@ -291,30 +294,33 @@ if (job) {
 
         // Add delete confirmation
         addModalContent("Are you sure you want to delete this job?", [
-          { text: "Cancel", onClick: () => modalClose() },
           {
             text: "Delete Job",
             onClick: async () => {
-              const jobIndex = jobsArray.findIndex(
-                (j) => j.title === job.title && j.type === job.type
-              );
+              const jobIndex = jobsArray.findIndex((j) => j.id === job.id);
 
               if (jobIndex !== -1) {
+                // Remove from local array
                 jobsArray.splice(jobIndex, 1);
 
-                // Update server (DELETE request)
+                // Remove from server
                 try {
                   await fetch(`http://localhost:3000/jobs/${job.id}`, {
                     method: "DELETE",
                   });
-                  renderJobDetails(jobsArray);
+                  console.log("Job deleted successfully");
+
+                  // Remove from localStorage
+                  localStorage.removeItem("selectedJob");
+
+                  // Option 1: redirect to index page
+                  window.location.href = "../index.html";
                 } catch (err) {
                   console.error("Failed to delete job:", err);
                 }
               }
 
               modalClose();
-              renderSelectedJob();
             },
           },
         ]);
