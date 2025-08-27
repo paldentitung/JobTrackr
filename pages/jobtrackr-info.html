@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <style>
       /* Basic Reset */
       * {
@@ -55,7 +59,9 @@
   <body>
     <header>
       <div class="title">
-        <a href="../index.html">Job Trackr</a>
+        <a href="../index.html" data-aos="fade-down" data-aos-duration="1200"
+          >Job Trackr</a
+        >
         <div class="menu-button-box">
           <button class="menu-button">
             <i class="fas fa-bars" id="menu-icon"></i>
@@ -64,15 +70,28 @@
       </div>
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./jobs.html">Jobs</a></li>
-          <li class="add-job"><a href="">Add Job</a></li>
+          <li>
+            <a
+              href="../index.html"
+              data-aos="fade-down"
+              data-aos-duration="1400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="./jobs.html" data-aos="fade-down" data-aos-duration="1800"
+              >Jobs</a
+            >
+          </li>
+          <li class="add-job">
+            <a href="" data-aos="fade-down" data-aos-duration="2200">Add Job</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="privacy-policy">
+      <section id="privacy-policy" data-aos="fade-up" data-aos-duration="1000">
         <h2>Privacy Policy</h2>
         <p>
           JobTrackr respects your privacy. We collect only necessary information
@@ -81,7 +100,11 @@
         </p>
       </section>
 
-      <section id="terms-conditions">
+      <section
+        id="terms-conditions"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h2>Terms & Conditions</h2>
         <p>
           By using JobTrackr, you agree to comply with our rules and
@@ -90,7 +113,7 @@
         </p>
       </section>
 
-      <section id="support">
+      <section id="support" data-aos="fade-up" data-aos-duration="1300">
         <h2>Support</h2>
         <p>
           Our support team is here to help you. You can report issues, request
@@ -98,7 +121,7 @@
         </p>
       </section>
 
-      <section id="contact">
+      <section id="contact" data-aos="fade-up" data-aos-duration="1600">
         <h2>Contact</h2>
         <p>
           Have questions or feedback? Reach out to us via email:
@@ -108,18 +131,18 @@
       </section>
     </main>
 
-    <footer>
-      <div class="footer-col">
+    <footer data-aos="fade-down" data-aos-duration="1000">
+      <div class="footer-col" data-aos="fade-down" data-aos-duration="1200">
         <h3>Job Trackr</h3>
         <p>"Your Jobs, Simplified."</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-down" data-aos-duration="1500">
         <a href="#"> <img src="../images/instagram.png" alt="instragram" /> </a
         ><a href="#"> <img src="../images/facebook.png" alt="facebook" /> </a
         ><a href="#"><img src="../images/twitter.png" alt="twitter" /></a
         ><a href="#"><img src="../images/whatsapp.png" alt="whatapps" /></a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-down" data-aos-duration="2200">
         <ul>
           <li><a href="#privacy-policy">Privacy Policy</a></li>
           <li><a href="#terms-conditions">Terms & Condtions</a></li>
@@ -128,7 +151,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col footer-message">
+      <div
+        class="footer-col footer-message"
+        data-aos="fade-down"
+        data-aos-duration="3000"
+      >
         <input type="text" id="message" placeholder="message" required />
         <button type="submit" id="message-btn">Sent</button>
       </div>
@@ -210,5 +237,9 @@
     <script src="../index.js"></script>
     <script src="../scripts/menu.js" defer></script>
     <script src="../scripts/message.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

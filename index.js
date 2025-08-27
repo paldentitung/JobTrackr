@@ -139,7 +139,7 @@ function renderSelectedJob(job) {
   if (!container || !job) return;
 
   const containerHtml = `
-  <div class="card-container">
+  <div class="card-container" data-aos="fade-up" data-aos-duration="1200">
           <div class="job-card">
             <div class="company-info">
               <h2>${job.company.name}</h2>

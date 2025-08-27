@@ -10,11 +10,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="title">
-        <a href="index.html">Job Trackr</a>
+        <a href="index.html" data-aos="fade-down" data-aos-duration="1200"
+          >Job Trackr</a
+        >
         <div class="menu-button-box">
           <button class="menu-button">
             <i class="fas fa-bars" id="menu-icon"></i>
@@ -23,9 +30,25 @@
       </div>
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="pages/jobs.html">Jobs</a></li>
-          <li class="add-job"><a href="">Add Job</a></li>
+          <li>
+            <a
+              href="../index.html"
+              data-aos="fade-down"
+              data-aos-duration="1400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="pages/jobs.html"
+              data-aos="fade-down"
+              data-aos-duration="1800"
+              >Jobs</a
+            >
+          </li>
+          <li class="add-job">
+            <a href="" data-aos="fade-down" data-aos-duration="2200">Add Job</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -33,11 +56,13 @@
       <section class="hero-section">
         <div class="hero-img">
           <img
+            data-aos="fade-right"
+            data-aos-duration="1200"
             src="images/cheerful-businessmen-close-window-removebg-preview.png"
             alt=""
           />
         </div>
-        <div class="hero-info">
+        <div class="hero-info" data-aos="fade-left" data-aos-duration="1800">
           <div class="page-title">Job Trackr</div>
           <div class="page-sub-title">"Your Jobs, Simplified."</div>
           <div class="view-job-button-box">
@@ -49,46 +74,64 @@
       </section>
       <section class="job-listing">
         <h2>Jobs:</h2>
-        <div class="job-card-container">
+        <div class="job-card-container" data-aos="fade-up">
           <!-- card -->
         </div>
 
         <button id="showmore-button">Show more</button>
       </section>
 
-      <section class="about">
-        <h2 class="page-title">How Job Trackr Works</h2>
-        <p class="page-sub-title">
+      <section class="about" data-aos="fade-up">
+        <h2 class="page-title" data-aos="fade-down" data-aos-duration="1200">
+          How Job Trackr Works
+        </h2>
+        <p class="page-sub-title" data-aos="fade-down" data-aos-duration="1500">
           Track, manage, and organize all your job applications in one place.
         </p>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials" data-aos="fade-up">
         <div class="page-title">Testimonials</div>
         <h2>What Users Say</h2>
         <!-- Only once -->
 
-        <div class="testimonials-box">
+        <div
+          class="testimonials-box"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <p class="user-feedback">
             "This app helped me organize my job applications easily!"
           </p>
         </div>
 
-        <div class="testimonials-box">
+        <div
+          class="testimonials-box"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
           <p class="user-feedback">
             "I love how simple and intuitive the interface is. It saves me so
             much time!"
           </p>
         </div>
 
-        <div class="testimonials-box">
+        <div
+          class="testimonials-box"
+          data-aos="fade-down"
+          data-aos-duration="1400"
+        >
           <p class="user-feedback">
             "The show more/less feature for job descriptions is really handy.
             Great job!"
           </p>
         </div>
 
-        <div class="testimonials-box">
+        <div
+          class="testimonials-box"
+          data-aos="fade-down"
+          data-aos-duration="1600"
+        >
           <p class="user-feedback">
             "The design is clean and responsive. I can use it on my phone and
             laptop easily."
@@ -97,10 +140,12 @@
       </section>
 
       <section class="faq" id="faq">
-        <div class="page-title">Frequently Asked Questions</div>
+        <div class="page-title" data-aos="fade-right" data-aos-duration="2000">
+          Frequently Asked Questions
+        </div>
 
         <div class="faq-container">
-          <div class="faq-item">
+          <div class="faq-item" data-aos="fade-up" data-aos-duration="1000">
             <ddiv class="faq-question">How do I add a new job?</ddiv>
             <p class="faq-answer">
               Click the “Add Job” button, fill in the job details, and press
@@ -108,7 +153,7 @@
             </p>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" data-aos="fade-up" data-aos-duration="1400">
             <div class="faq-question">Can I edit a job after adding it?</div>
             <p class="faq-answer">
               Yes, click the “Edit” icon on the job card, update the details,
@@ -116,7 +161,7 @@
             </p>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" data-aos="fade-up" data-aos-duration="1800">
             <div class="faq-question">How do I mark a job as completed?</div>
             <p class="faq-answer">
               Click the checkbox on the job card. The job will move to the
@@ -124,7 +169,7 @@
             </p>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" data-aos="fade-up" data-aos-duration="2200">
             <div class="faq-question">
               Is there a way to see more details of a job?
             </div>
@@ -134,7 +179,7 @@
             </p>
           </div>
 
-          <div class="faq-item">
+          <div class="faq-item" data-aos="fade-up" data-aos-duration="2600">
             <div class="faq-question">
               Can I filter jobs by type or location?
             </div>
@@ -146,18 +191,18 @@
         </div>
       </section>
 
-      <footer>
-        <div class="footer-col">
+      <footer data-aos="fade-down" data-aos-duration="1000">
+        <div class="footer-col" data-aos="fade-down" data-aos-duration="1200">
           <h3>Job Trackr</h3>
           <p>"Your Jobs, Simplified."</p>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" data-aos="fade-down" data-aos-duration="1500">
           <a href="#"> <img src="images/instagram.png" alt="instragram" /> </a
           ><a href="#"> <img src="images/facebook.png" alt="facebook" /> </a
           ><a href="#"><img src="images/twitter.png" alt="twitter" /></a
           ><a href="#"><img src="images/whatsapp.png" alt="whatapps" /></a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" data-aos="fade-down" data-aos-duration="2200">
           <ul>
             <li>
               <a href="pages/jobtrackr-info.html#privacy-policy"
@@ -174,7 +219,11 @@
             <li><a href="pages/jobtrackr-info.html#contact">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col footer-message">
+        <div
+          class="footer-col footer-message"
+          data-aos="fade-down"
+          data-aos-duration="3000"
+        >
           <input type="text" id="message" placeholder="message" required />
           <button type="submit" id="message-btn">Sent</button>
         </div>
@@ -259,5 +308,10 @@
     <script src="scripts/menu.js"></script>
     <script src="scripts/faq.js"></script>
     <script src="scripts/message.js"></script>
+    <!-- AOS JS (before closing body tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
