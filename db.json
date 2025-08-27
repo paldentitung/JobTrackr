@@ -191,6 +191,18 @@
         "name": "CodeCrafters Pvt. Ltd.",
         "description": "CodeCrafters Pvt. Ltd. is a leading software development company in Nepal, specializing in building modern, scalable, and responsive web applications for international clients. With a strong focus on innovation and quality, we empower businesses to embrace digital transformation. Our team of developers, designers, and analysts collaborates to deliver cutting-edge solutions that drive measurable results."
       }
+    },
+    {
+      "id": "1756307942881",
+      "title": "QA Engineer",
+      "type": "remote",
+      "description": "Join our dynamic team to build responsive and interactive web interfaces using HTML, CSS, and JavaScript. Collaborate with senior developers and gain hands-on experience in modern frontend frameworks.",
+      "salary": "$70-80k/year",
+      "location": "Nepal",
+      "company": {
+        "name": "TestPro Solutions",
+        "description": "TestPro Solutions is a quality assurance and software testing company committed to delivering reliable, bug-free applications. Our team ensures that every digital product meets the highest standards of performance, usability, and security. With a client-first approach, we partner with startups and enterprises to deliver trustworthy solutions across industries."
+      }
     }
   ]
 }

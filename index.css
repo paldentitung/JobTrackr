@@ -307,6 +307,14 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+.footer-col img {
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s;
+}
+.footer-col img:hover {
+  transform: scale(1.2);
+}
 .footer-col ul li {
   list-style: none;
   border: 1px solid transparent;
@@ -498,6 +506,7 @@ footer {
   }
   .menu-button-box {
     display: block;
+    z-index: 9999;
   }
   nav,
   .add-job-btn-box {
@@ -505,15 +514,19 @@ footer {
   }
   nav.active {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 100%;
-    bottom: -100px;
-    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: var(--SecondaryColor);
     backdrop-filter: blur(16px);
+    z-index: 999;
   }
+
   nav.active ul {
     flex-direction: column;
     gap: 10px;

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JobTrackr Info</title>
     <link rel="stylesheet" href="../index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <style>
       /* Basic Reset */
       * {
@@ -110,10 +114,10 @@
         <p>"Your Jobs, Simplified."</p>
       </div>
       <div class="footer-col">
-        <a href=""> <img src="" alt="instragram" /> </a
-        ><a href=""> <img src="" alt="facebook" /> </a
-        ><a href=""><img src="" alt="twitter" /></a
-        ><a href=""><img src="" alt="whatapps" /></a>
+        <a href="#"> <img src="../images/instagram.png" alt="instragram" /> </a
+        ><a href="#"> <img src="../images/facebook.png" alt="facebook" /> </a
+        ><a href="#"><img src="../images/twitter.png" alt="twitter" /></a
+        ><a href="#"><img src="../images/whatsapp.png" alt="whatapps" /></a>
       </div>
       <div class="footer-col">
         <ul>
@@ -125,8 +129,8 @@
         </ul>
       </div>
       <div class="footer-col footer-message">
-        <input type="text" id="message" />
-        <button type="submit">Sent</button>
+        <input type="text" id="message" placeholder="message" required />
+        <button type="submit" id="message-btn">Sent</button>
       </div>
     </footer>
     <!-- modal -->
@@ -204,5 +208,7 @@
       <div class="modal-close-button">&times;</div>
     </div>
     <script src="../index.js"></script>
+    <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/message.js"></script>
   </body>
 </html>
